@@ -128,22 +128,17 @@
 \end{frame}
 
 \begin{frame}{Step 7: Resolving the Contradiction}
-    The contradiction arose because we assumed $b,c \geq 2$ when using modulo 9.
+    The contradiction arose because we assumed $b,c \geq 1$ when using modulo 9.
     
-    Therefore, at least one of $b$ or $c$ must be $\leq 1$.
+    Therefore, at least one of $b$ or $c$ must be $= 0$.
     
     \textbf{Possibilities:}
     \begin{itemize}
-        \item $b = 0$ or $b = 1$
-        \item $c = 0$ or $c = 1$
+        \item $b = 0$ or
+        \item $c = 0$ 
     \end{itemize}
     
-    By symmetry, we only need to check a few cases:
-    \begin{itemize}
-        \item $(b,c) = (0,0)$, $(0,1)$, $(1,0)$, $(1,1)$
-    \end{itemize}
-    
-    Only $(0,0)$ yields a solution: $(a,b,c) = (0,0,0)$.
+    By symmetry, we only need to check a few cases.
 \end{frame}
 
 \begin{frame}{Final Result from Brenner and Foster}

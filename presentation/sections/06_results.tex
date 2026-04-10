@@ -10,15 +10,15 @@
            \item There exist $M_b, M_c$ such that $b \leq M_b$ and $c \leq M_c$ for any solution
        \end{enumerate}
     \end{proposition}
+        \vspace*{0.5cm}
+
+    \textbf{It means:}
+     \begin{beamercolorbox}[rounded=true,shadow=true,sep=0.75em,wd=1\textwidth,center]{block body}
+        \small
+        ``All solutions can be found if we can find the \textbf{upper bound} of all variables in LHS or RHS ''
+    \end{beamercolorbox}
+     
     
-    \textbf{Proof sketch (Condition 1):}
-    \begin{align*}
-        q^b+r^c &= 1+p^a \\
-        q^b &= 1+p^a - r^c \leq p^a \leq p^M \\
-        \implies b &\leq \frac{M\ln p}{\ln q},\quad c \leq \frac{M\ln p}{\ln r}
-    \end{align*}
-    
-    \textbf{Conclusion:} All solutions lie in a finite set, hence computable in finite time.
 \end{frame}
 \begin{frame}{Modeling the Modulo Trick with Sets}
     \begin{block}{What happens when we apply the modulo trick?}
@@ -26,7 +26,7 @@
             \item We start with \textbf{all possible} exponent triples $(a,b,c)$
             \item We choose a modulus $m_1$ and impose: $1+p^a \equiv q^b+r^c \pmod{m_1}$
             \item This eliminates triples that don't satisfy this congruence
-            \item We repeat with $m_2, m_3, ...$ - each time further restricting the possibilities
+            \item We repeat with $m_2, m_3, \dots$ -- each time further restricting the possibilities
         \end{itemize}
     \end{block}
     
@@ -109,16 +109,11 @@
 
     \textbf{Proof strategy:}
     \begin{enumerate}
-        \item By Lemma 3, it suffices to show for \textbf{any} modulus $m$, $A_m$ contains arbitrarily large $a,b,c$
-        \item Factor $m = \chi \cdot \Gamma \cdot \mathrm{Z}$ where:
-            \begin{itemize}
-                \item $\chi$ contains primes dividing $p$
-                \item $\Gamma$ contains primes dividing $q$
-                \item $\mathrm{Z}$ contains primes dividing neither
-            \end{itemize}
-        \item Construct solutions using Euler's theorem $a^{\phi(n)} \equiv 1 \pmod n$ when $\gcd(a,n)=1$
-        \item Parameters can be arbitrarily large $\implies$ non-solvable
+        \item By Lemma 3, it suffices to show for \textbf{any} modulus $m$, $A_m$ 
+        contains arbitrarily large $a,b,c$
+        \item Create a form of solution that can generate arbitrarily large solutions.
     \end{enumerate}
+  
 \end{frame}
 
 \begin{frame}{Corollary 1 - Validating Brenner and Foster (8.037)}
@@ -145,14 +140,14 @@
     \end{block}
     
     \begin{itemize}
-        \item This is just ONE type of exponential Diophantine equation
-        \item We want to analyze other forms like:
+        % \item This is just ONE type of exponential Diophantine equation
+        \item But, We want to analyze other forms like:
         \begin{align*}
             &p^x - p^y = q^z - q^w \quad \text{(Brenner \& Foster 8.033)}\\
             &(pq)^a - p^b - q^c + 1 = 0 \quad \text{(Brenner \& Foster 8.037)}
         \end{align*}
         
-        \item \textbf{Significance:} To prove non-solvability for these cases, we need definitions that work for ANY exponential Diophantine equation
+        % \item \textbf{Significance:} To prove non-solvability for these cases, we need definitions that work for ANY exponential Diophantine equation
         
         \item \textbf{Generalization strategy:} Extend our framework to handle equations of the form:
         \[C_1 + \sum_{i=1}^n k_i a_i^{x_i} = C_2 + \sum_{j=1}^m l_j b_j^{y_j}\]
@@ -161,22 +156,22 @@
 
 \begin{frame}{General Form of Exponential Diophantine Equation}
     \begin{definition}[General Form]
-        Let $n,m \in \mathbb{Z}^{+}$, and $C_1, C_2 \in \mathbb{Z}_{\geq 0}$ and $k_i, a_i, l_j, b_j \in \mathbb{Z}^{+}$ for $i=1,2,..,n$ and $j=1,2,...,m$. 
+        Let $n,m \in \mathbb{Z}^{+}$, and $C_1, C_2 \in \mathbb{Z}_{\geq 0}$ and $k_i, a_i, l_j, b_j \in \mathbb{Z}^{+}$ for $i=1,2,\dots,n$ and $j=1,2,\dots,m$. 
         
         Consider the exponential Diophantine equation
         \begin{equation}
             C_1 + \sum_{i=1}^n k_i a_i^{x_i} = C_2 + \sum_{j=1}^m l_j b_j^{y_j} \label{general}
         \end{equation}
-        where $x_1,x_2,..,x_n, y_1,y_2,..,y_m \in \mathbb{Z}_{\geq 0}$.
+        where $x_1,x_2,\dots,x_n, y_1,y_2,\dots,y_m \in \mathbb{Z}_{\geq 0}$.
     \end{definition}
     
     \textbf{Examples rewritten in this form:}
     \begin{align*}
-        1 + 5^a &= 7^b + 7^c \quad (C_1=1, n=1, k_1=1, a_1=5, C_2=0, m=2, l_1=l_2=1, b_1=b_2=7)\\
+        1 + 5^a &= 7^b + 7^c \quad \small(C_1=1, n=1, k_1=1, a_1=5, C_2=0, m=2, l_1=l_2=1, b_1=b_2=7)\\
         p^x - p^y &= q^z - q^w \quad (C_1=0, n=2, k_1=1, k_2=-1, a_1=a_2=p, C_2=0, m=2, l_1=1, l_2=-1, b_1=b_2=q)
     \end{align*}
     
-    \textbf{Significance:} This unified notation lets us treat all exponential Diophantine equations with the same mathematical tools, regardless of their specific structure.
+    \textbf{Significance:} Almost every form of eDe can be written in this form!
 \end{frame}
 
 \begin{frame}{Generalized Computability Criterion}
@@ -215,6 +210,7 @@
 \end{frame}
 
 \begin{frame}{General Definition of Solvability with Modulo Trick}
+
     \begin{definition}[General Solvability]
         The exponential Diophantine equation of the form \eqref{general} is called \textbf{solvable with modulo trick} if there exists a finite sequence of moduli $m_1, m_2, ..., m_k \in \mathbb{Z}^{+}$ used for modulo trick such that one of these conditions holds:
         
@@ -225,15 +221,11 @@
         \end{itemize}
     \end{definition}
     
-    \textbf{Significance of this definition:}
-    \begin{itemize}
-        \item Captures exactly what the modulo trick aims to achieve - bounding one side of the equation
-        \item Therefore, only finitely many tuples remain to check - the equation becomes computable!
-        \item This definition works for ANY equation of form \eqref{general}
-    \end{itemize}
+     
 \end{frame}
 
 \begin{frame}{General Definition of Non-solvability with Modulo Trick}
+ 
     \begin{definition}[General Non-solvability]
         The exponential Diophantine equation of the form \eqref{general} is called \textbf{non-solvable with modulo trick} if for each finite sequence of moduli $m_1, m_2, ..., m_k \in \mathbb{Z}^{+}$ used for modulo trick, the following conditions hold for every $N, M \in \mathbb{Z}^{+}$:
         
@@ -244,12 +236,7 @@
         \end{itemize}
     \end{definition}
     
-    \textbf{Significance of this definition:}
-    \begin{itemize}
-        \item No matter which moduli we choose, we cannot force either side of the equation to be bounded
-       
-        \item This formalizes what Brenner and Foster meant by "not amenable" to their method
-    \end{itemize}
+     
 \end{frame}
 
 
@@ -261,7 +248,7 @@
     
     \textbf{Significance:}
     \begin{itemize}
-    \item  Generalized of lemma 1
+    \item  Generalization of Lemma 1
         \item Any sequence of modular restrictions reduces to a \textbf{single modulus} (the LCM)
         \item Allows us to prove non-solvability by considering arbitrary single modulus
     \end{itemize}
@@ -275,13 +262,7 @@
         for all $x \geq k$.
     \end{lemmas}
     
-    \textbf{Proof sketch:}
-    \begin{itemize}
-        \item Residues are in $\{0,1,...,n-1\}$ (finite set)
-        \item By pigeonhole principle, some residue repeats: $a^i \equiv a^{i+\epsilon}$
-        \item Multiply by $a^t$ to extend periodicity
-        \item  \textbf{Key insight:} Exponents can grow while maintaining congruence patterns
-    \end{itemize}
+    \textbf{Key insight:} Exponents can grow while maintaining congruence patterns
     
     
 \end{frame}
@@ -293,14 +274,10 @@
         is non-solvable with modulo trick.
     \end{theorems}
     
-    \textbf{Proof sketch:}
+    \textbf{Proof Strategy:}
     \begin{enumerate}
-        \item For any modulus $d$, by Lemma 3, $\exists$ periods $\epsilon_a,\epsilon_b$ and starting points $k_a,k_b$
-        \item For any $x \geq k_a$, $y \geq k_b$, 
-            \[(x,\; x+N\epsilon_a,\; y,\; y+M\epsilon_b) \in A'_d\]
-        \item $x+N\epsilon_a,\;y+M\epsilon_b $ are increasing for any positive integer $N,M$
-        \item Thus arbitrarily large exponents exist in $A'_d$ for any $d$
-        \item Therefore non-solvable by modulo trick
+        \item  By Generalized Single modulus lemma to reduce the problem.
+        \item  Use Lemma 3 to generate solutions that grow without upper bound in any modulo.
     \end{enumerate}
 \end{frame}
 
@@ -315,7 +292,7 @@
     \textbf{Significance:}
     \begin{itemize}
         \item Validates Brenner and Foster's comment (8.033)
-        \item They noted this equation "cannot be fully investigated by reducing it to congruences"
+        \item They noted this equation ``cannot be fully investigated by reducing it to congruences"
         \item Our proof shows why: residues become periodic, allowing arbitrarily large solutions to satisfy any congruence
     \end{itemize}
 \end{frame}

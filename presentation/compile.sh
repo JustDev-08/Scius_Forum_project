@@ -9,7 +9,10 @@ BUILD_DIR="${BUILD_DIR:-build}"
 
 mkdir -p "$BUILD_DIR"
 
-if command -v latexmk >/dev/null 2>&1; then
+# Check for local tectonic first (in the same directory as this script)
+if [ -x "$SCRIPT_DIR/tectonic" ]; then
+    "$SCRIPT_DIR/tectonic" --keep-logs --outdir "$BUILD_DIR" "$MAIN_TEX"
+elif command -v latexmk >/dev/null 2>&1; then
     latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir="$BUILD_DIR" "$MAIN_TEX"
 elif command -v tectonic >/dev/null 2>&1; then
     tectonic --keep-logs --outdir "$BUILD_DIR" "$MAIN_TEX"

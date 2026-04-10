@@ -737,14 +737,14 @@ LaTeX Font Info:    ... okay on input line 50.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
-* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
-* \paperwidth=455.24408pt
-* \paperheight=256.0748pt
-* \textwidth=398.3386pt
-* \textheight=227.62207pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* h-part:(L,W,R)=(8.0pt, 348.19536pt, 8.0pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=348.19536pt
+* \textheight=244.6939pt
+* \oddsidemargin=-64.26999pt
+* \evensidemargin=-64.26999pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -839,10 +839,10 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 \c@lstlisting=\count362
  (main.nav)
-File: source/logo-name.pdf Graphic file (type pdf)
-<use source/logo-name.pdf>
+File: source/logo-name1.pdf.pdf Graphic file (type pdf)
+<use source/logo-name1.pdf.pdf>
 
-Overfull \hbox (45.52718pt too wide) detected at line 53
+Overfull \hbox (36.42175pt too wide) detected at line 53
  [] 
  []
 
@@ -862,48 +862,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [2
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 1>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 1>
  [3
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 2>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 2>
  [4
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 3>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 3>
  [5
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 4>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 4>
  [6
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 5>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 5>
  [7
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 6>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 6>
  [8
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 7>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 7>
  [9
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 8>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 8>
  [10
 
 ]
-File: ../firyn.pdf Graphic file (type pdf)
-<use ../firyn.pdf, page 9>
+File: ./source/new4:3.pdf Graphic file (type pdf)
+<use ./source/new4:3.pdf, page 9>
  [11
 
 ]
@@ -915,28 +915,21 @@ File: ../firyn.pdf Graphic file (type pdf)
 
 ] [15
 
+] [16
+
 ]
-Overfull \vbox (8.55566pt too high) detected at line 66
- []
-
-[16
-
-] [17
+[17
 
 ] [18
 
-]
-Overfull \vbox (3.41911pt too high) detected at line 128
- []
-
-[19
+] [19
 
 ] [20
 
 ] [21
 
 ]) (sections/03_modulo_trick
-Overfull \vbox (17.21075pt too high) detected at line 60
+Overfull \vbox (0.13893pt too high) detected at line 60
  []
 
 [22
@@ -955,41 +948,39 @@ Missing character: There is no 1 ("31) in font nullfont!
 
 ] [27
 
-]) (sections/06_results [28
+]) (sections/06_results
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 8 ("38) in font nullfont!
+[28
 
-]
-Overfull \vbox (14.00972pt too high) detected at line 42
- []
-
-[29
+] [29
 
 ] [30
 
 ]
-Overfull \vbox (4.05237pt too high) detected at line 85
+Overfull \vbox (10.98055pt too high) detected at line 85
  []
 
 [31
 
 ] [32
 
-]
-Overfull \vbox (3.10765pt too high) detected at line 122
- []
-
-[33
+] [33
 
 ] [34
 
 ] [35
 
 ]
-Overfull \hbox (67.27174pt too wide) detected at line 180
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 175.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 175.
+
+
+Overfull \hbox (117.41498pt too wide) detected at line 175
 []
- []
-
-
-Overfull \vbox (5.96793pt too high) detected at line 180
  []
 
 [36
@@ -997,16 +988,17 @@ Overfull \vbox (5.96793pt too high) detected at line 180
 ] [37
 
 ]
-Overfull \vbox (34.36739pt too high) detected at line 215
+Overfull \hbox (25.6456pt too wide) detected at line 210
+[][] \OT1/cmr/m/n/10 = []
+ []
+
+
+Overfull \vbox (47.80557pt too high) detected at line 210
  []
 
 [38
 
-]
-Overfull \vbox (9.93765pt too high) detected at line 234
- []
-
-[39
+] [39
 
 ] [40
 
@@ -1022,8 +1014,6 @@ Overfull \vbox (9.93765pt too high) detected at line 234
 
 ] [46
 
-] [47
-
 ]
 File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
@@ -1033,12 +1023,12 @@ File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
 File: beamericonarticle.pdf Graphic file (type pdf)
 <use beamericonarticle.pdf>
- [48
+ [47
 
 ]
-[49
+[48
 
-] [50
+] [49
 
 ]
 \tf@nav=\write6
@@ -1054,4 +1044,4 @@ File: beamericonarticle.pdf Graphic file (type pdf)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6EBCEC01DD248B17D8C1A6E1519C8624;1448.
  ) )
-Output written on main.xdv (50 pages, 364992 bytes).
+Output written on main.xdv (49 pages, 342468 bytes).
